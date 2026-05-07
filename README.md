@@ -16,7 +16,7 @@ Perfect for improving connectivity to Thread devices that are far from your bord
 
 - ESP32-C6-DevKitC (or compatible ESP32-C6 board)
 - USB cable for flashing and power
-- **8MB flash** (most ESP32-C6 boards have this)
+- **4MB flash** (most ESP32-C6 boards have this)
 
 ## Flashing Instructions
 
@@ -123,7 +123,7 @@ This firmware is based on:
 - OpenThread FTD (Full Thread Device) enabled
 - WiFi disabled (Thread only)
 - Matter commissioning with default test credentials
-- 8MB flash partition scheme for larger firmware
+- 4MB flash partition scheme for larger firmware
 
 ### Building from Source
 
@@ -138,7 +138,7 @@ cd esp-matter
 # Configure and build
 cd examples/light
 idf.py set-target esp32c6
-idf.py menuconfig  # Disable WiFi, enable OpenThread
+idf.py menuconfig  # Disable WiFi, enable OpenThread, or use `config` in src directory of this repo
 idf.py build
 
 # Binaries will be in: build/bootloader/bootloader.bin, 
